@@ -1,0 +1,28 @@
+{
+  "name": "backside-utils",
+  "version": "0.0.0",
+  "description": "A set of common utils between backside components",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/backside/backside-utils.git"
+  },
+  "keywords": [
+    "backside"
+  ],
+  "author": "addisonj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/backside/backside-utils/issues"
+  },
+  "devDependencies": {
+    "mocha": "~1.20.1",
+    "chai": "~1.9.1"
+  }
+}
