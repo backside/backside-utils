@@ -203,5 +203,8 @@ describe("tree utils", function() {
     it("should be able collapse a value tree into normal json", function() {
       assert.deepEqual(treeUtils.collapseTree(expandedTree), tree)
     })
+    it("should return null when passed a null", function() {
+      assert.deepEqual(treeUtils.collapseTree(null), null)
+    })
   })
 })
