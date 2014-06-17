@@ -60,6 +60,20 @@ var expandedTree = {
     }
   }
 }
+var expandedTree2 = {
+  bar: {
+    priority: 1,
+    value: {
+      baz: {
+        value: null
+      },
+      bat: {
+        value : 4,
+        priority : 2
+      }
+    }
+  }
+}
 
 var tree = {
   bar: {
@@ -208,6 +222,12 @@ describe("tree utils", function() {
     })
     it("should return a single string when passed a single node", function() {
       assert.equal(treeUtils.collapseTree({ priority: null, value: 'hello' }), "hello")
+    })
+    it("should return a null if given the first value of null", function() {
+      assert.equal(treeUtils.collapseTree({ priority: null, value: null }), null)
+    })
+    it("should be able to handle a null in the middle of tree", function() {
+      assert.deepEqual(treeUtils.collapseTree(expandedTree2), { bar: { baz: {}, bat: 4 } })
     })
   })
 })
