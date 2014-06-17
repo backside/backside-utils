@@ -206,5 +206,8 @@ describe("tree utils", function() {
     it("should return null when passed a null", function() {
       assert.deepEqual(treeUtils.collapseTree(null), null)
     })
+    it("should return a single string when passed a single node", function() {
+      assert.equal(treeUtils.collapseTree({ priority: null, value: 'hello' }), "hello")
+    })
   })
 })
