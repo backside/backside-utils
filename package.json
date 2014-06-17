@@ -1,6 +1,6 @@
 {
   "name": "backside-utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A set of common utils between backside components",
   "main": "index.js",
   "directories": {
